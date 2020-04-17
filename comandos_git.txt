@@ -1,0 +1,107 @@
+//crear repositorio local
+git init
+
+//ver configuracion del ambiente git
+git config -l
+
+//descargar archivos
+git clone url
+
+//agregar
+git add .
+
+//commit con add implicito
+git commit -am "mensaje"
+
+//realizar commit
+git commit -m "segundo y tercer proyecto"
+
+//descargar al repositorio local
+git fetch
+
+//descargar al directorio y al repositorio local
+git pull
+
+//ver historial de cambios
+git log nombre_archivo
+
+//ver cambios
+git show nombre_archivo
+
+//comparar versiones
+git diff 
+
+//volver a una version anterior de commit
+git reset id_commit --hard
+
+//ver cantidad de cambios en cada archivo
+git log --stat
+
+//trae el archivo del commit especifico
+git checkout id_commit archivo
+
+//trae la ultima version de un archivo
+git checkout master archivo
+
+//crear rama
+git branch nombre_rama
+
+//cambiar de rama
+git checkout nombre_rama
+
+//listar ramas
+git branch
+
+//mezclar ramas
+git merge nombre_rama 
+
+//ver historial de ramas
+git show-branch 
+git show-branch --all
+
+//crear un origen remoto
+git remote add origin url_repositorio
+
+//descargar todos los archivos presentes remotamente
+git pull origin master --allow-unrelated-histories
+
+//subir la rama master
+git push origin master
+
+//remover origin
+git remote rm origin
+
+//generar clave publica y privada
+ssh-keygen -t rsa -b 4096 -C "email"
+
+//evaluar si el agente de llaves esta activo
+eval $(ssh-agent -s)
+
+//agregar llave al sistema
+ssh-add ~/.ssh/id_rsa
+
+//mostrar log de una manera grafica
+git log --all --graph --decorate --oneline
+
+//crear alias
+alias arbol_git="git log --all --graph --decorate --oneline"
+
+//crear un tag
+git tag -a v0.1 -m "primera version estable" id_hash
+
+//listar tag
+git tag
+
+//referncia a la que esta amarrado el tag
+git show-ref --tags
+
+//subir los tags a github
+git push origin --tags
+
+//eliminar tag localmente
+git tag -d nombre_tag
+
+//eliminar tag de github
+git push origin :refs/tags/nombre_tag
+
+
