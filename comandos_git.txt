@@ -1,6 +1,9 @@
 //crear repositorio local
 git init
 
+//obtener ayuda sobre un comando
+git comando --help
+
 //ver configuracion del ambiente git
 git config -l
 
@@ -103,5 +106,63 @@ git tag -d nombre_tag
 
 //eliminar tag de github
 git push origin :refs/tags/nombre_tag
+
+//pegar una rama en otra (se debe estar en la rama que tiene la información que desea pegar en la rama destino)
+git rebase nombre_rama_destino_a_pegar
+
+//guarda temporalmente sin realizar commit, y te devuelve el contenido del anterior commit
+git stash
+
+//listado de lo guardado en stash
+git stash list
+
+//traer lo guardado en stash
+git stash pop
+
+//borrar el contenido de stash
+git stash drop
+
+//crear una rama con el contenido de stash
+git stash branch nombre_nueva_rama
+
+//borrar los archivos queno deseas subir al repo
+git clean -f
+
+//ver que archivos se van a borrar
+git clean --dry-run
+
+//traer un commit de otra rama
+git cherry-pick id_commit
+
+//guarda cambios en el commit anterior
+git commit --amend
+
+//traer la historia completo de commits
+git reflog
+
+//buscar contenido en el proyecto
+git grep palabra_a_buscar
+
+//buscar contenido en el proyecto y me informe en que linea
+git grep -n palabra_a_buscar
+
+//buscar contenido en los commit realizados
+git log -S "palabra a buscar"
+
+//comando para saber cuantos commits ha realizado cada colaborador
+git shortlog -sn --all --no-merges
+
+//agregar alias en git
+git config --global alias.nombre_alias "comando git"
+git config --global alias.stats "git shortlog -sn --all --no-merges"
+
+//ver quien realizo liea por linea un archivo
+git blame -c nombre_archivo
+
+//ver ramas remotas
+git branch -r
+
+//ver todas las ramas
+git branch -a
 
 
