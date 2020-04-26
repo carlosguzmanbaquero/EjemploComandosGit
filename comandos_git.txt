@@ -1,6 +1,10 @@
 //crear repositorio local
 git init
 
+//configurar usuario y correo 
+git config --global user.email "you@example.com"
+ git config --global user.name "Tu Nombre"
+
 //obtener ayuda sobre un comando
 git comando --help
 
